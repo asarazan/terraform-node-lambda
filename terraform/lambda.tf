@@ -7,7 +7,7 @@ locals {
 resource "null_resource" "npm" {
   provisioner "local-exec" {
     working_dir = local.root
-    command = "npm install && npm run ${var.npm}"
+    command = "npm install && npm run ${var.buildscript}"
   }
   triggers = {
     rerun_every_time = uuid()
@@ -27,7 +27,7 @@ resource "aws_lambda_function" "main" {
   source_code_hash = data.archive_file.lambda_source.output_base64sha256
   handler = var.handler
   runtime = var.runtime
-  publish = var.publish
+  publish = "true"
   role = aws_iam_role.lambda.arn
   depends_on = [
     aws_cloudwatch_log_group.lambda,
