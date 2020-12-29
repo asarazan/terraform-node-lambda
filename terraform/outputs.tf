@@ -7,7 +7,7 @@ output "endpoint" {
 }
 
 output "lambda_console_url" {
-  value = "https://console.aws.amazon.com/lambda/home?region=${var.region}#/functions/${local.full_name}"
+  value = "https://console.aws.amazon.com/lambda/home?region=${var.region}#/functions/${local.full_name}?tab=overview"
 }
 
 output "build_path" {
