@@ -32,6 +32,9 @@ output "lambda_console_url" {
 }
 ```
 
+### Defaults:
+We make a set of assumptions about your NPM build process, as well as folder structure. See [variables.tf](https://github.com/asarazan/terraform-node-lambda/blob/main/terraform/variables.tf) for a list of defaults and overrides.
+
 ### TODO:
 * Narrow the scope of logging in the IAM roles.
 * Currently supports "/" + "{proxy+}". Would be nice to make this configurable.
