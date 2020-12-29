@@ -2,7 +2,7 @@
 A convenience module for deploying endpoints with AWS Lambda + API Gateway.
 
 ### TL;DR
-It's fun to spin up APIs on lambda, and a great way to test out new features... but the terraform hackery required to do so is surprisingly heavy. This is a high-level module that will do the following:
+It's fun to spin up APIs on lambda, and a great way to test out new features... but the terraform boilerplate required to do so is surprisingly heavy. This is a high-level module that will do the following:
 1. Build & Zip your project
 2. Deploy to Lambda
 3. Provision API Gateway for proxy+root access with "ANY" method
