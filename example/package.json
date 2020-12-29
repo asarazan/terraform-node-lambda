@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "init:dev": "pushd terraform && terraform get -update && terraform init && popd",
-    "deploy:dev": "pushd terraform && terraform apply -auto-approve && popd"
+    "taint:dev": "pushd terraform && terraform taint module.lambda.aws_api_gateway_deployment.deployment && popd",
+    "deploy:dev": "pushd terraform && terraform apply -auto-approve && popd",
+    "redeploy:dev": "npm run init:dev && npm run deploy:dev"
   },
   "keywords": [],
   "author": "",
