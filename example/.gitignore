@@ -1,0 +1,6 @@
+**/.terraform
+**/*.tfstate*
+lib
+node_modules
+.idea
+lambda.zip
