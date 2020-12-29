@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 module "lambda" {
-  source = "../../terraform"
-//  source = "git@github.com:asarazan/terraform-node-lambda.git//terraform?ref=main"
+//  source = "../../terraform"
+  source = "git@github.com:asarazan/terraform-node-lambda.git//terraform?ref=main"
   name = "lambda-example"
 }
 
