@@ -16,11 +16,10 @@ resource "aws_iam_role" "lambda" {
 }
 
 locals {
-  lambda_function_name = "${var.stage}-${var.name}"
 }
 
 resource "aws_cloudwatch_log_group" "lambda" {
-  name = "/aws/lambda/${local.lambda_function_name}"
+  name = "/aws/lambda/${local.full_name}"
 }
 
 // TODO RESTRICT THIS!

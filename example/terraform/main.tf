@@ -10,3 +10,7 @@ module "lambda" {
 output "endpoint" {
   value = module.lambda.endpoint
 }
+
+output "lambda_console_url" {
+  value = module.lambda.lambda_console_url
+}

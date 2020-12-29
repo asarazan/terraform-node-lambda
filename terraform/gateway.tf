@@ -1,12 +1,12 @@
 resource "aws_api_gateway_rest_api" "lambda" {
-  name = "${var.stage}-${var.name}"
+  name = local.full_name
   tags = {
     STAGE = var.stage
   }
 }
 
 resource "aws_lambda_permission" "api" {
-  function_name = local.lambda_function_name
+  function_name = local.full_name
   principal = "apigateway.amazonaws.com"
   action = "lambda:InvokeFunction"
   source_arn = "${aws_api_gateway_rest_api.lambda.execution_arn}/*/*"

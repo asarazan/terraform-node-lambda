@@ -22,7 +22,7 @@ data "archive_file" "lambda_source" {
 }
 
 resource "aws_lambda_function" "main" {
-  function_name = local.lambda_function_name
+  function_name = local.full_name
   filename = local.zip
   source_code_hash = data.archive_file.lambda_source.output_base64sha256
   handler = var.handler
