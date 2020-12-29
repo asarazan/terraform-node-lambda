@@ -1,3 +1,7 @@
+variable "root_nesting" {
+  default = ".."
+}
+
 variable "name" {
   default = "lambda"
 }

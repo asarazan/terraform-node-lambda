@@ -1,5 +1,5 @@
 locals {
-  root = "${path.module}/.."
+  root = "${path.root}/${var.root_nesting}"
   build = "${local.root}/${var.build_dir}"
   zip = "${local.root}/${var.zipfile}"
 }
