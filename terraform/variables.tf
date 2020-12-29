@@ -3,7 +3,7 @@ variable "root_nesting" {
 }
 
 variable "name" {
-  default = "lambda"
+  description = "The basename for the Lambda function and most associated resources."
 }
 
 variable "runtime" {
