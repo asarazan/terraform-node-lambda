@@ -33,6 +33,8 @@ output "lambda_console_url" {
 ```
 
 ### TODO:
-* Narrow the scope of logging in the IAM roles
-* Come up with more flexible treatment of npm build configurations
+* Narrow the scope of logging in the IAM roles.
+* Currently supports "/" + "{proxy+}". Would be nice to make this configurable.
+* Come up with more flexible treatment of npm build configurations.
 * Figure a better way to invalidate/redeploy the api gateway coniguration.
+* Look into Gateway V2 for websockets et al.
